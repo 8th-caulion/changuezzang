@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../images/back.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+/* style the header */
+.header {
+    background-color: #E1DCEA;
+    /* padding은 여백값 지정 */
+    text-align: center;
+    /* text-align은 텍스트의 정렬방향을 의미
+        left/right/center/justify(양쪽정렬) */
+    line-height: 150%;
+
+}
+
+/* style the top navigation bar */
+
+/* Style the footer */
+.footer {
+    background-color: #F0D18C;
+    text-align: center;
+    line-height: 50%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    margin: 0;
+    border-spacing: 0px;
+    /* line-height는 줄 사이 간격을 지정하는 속성임!*/
+}
