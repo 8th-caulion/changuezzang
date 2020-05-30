@@ -1,0 +1,15 @@
+{% extends 'events_base.html' %}
+
+{% block content %}
+    <div class="container">
+        <br>
+        <h1>caulion events</h1>
+        {{calendar}}
+        <div class="outer">
+            <a class="btn btn-light left" href="{% url 'calendar' %}?{{ prev_month }}"><span>이전 달</span> </a>
+            <a class="btn btn-light right" href="{% url 'calendar' %}?{{ next_month }}"><span>다음 달</span> </a>
+        </div>
+    </div>
+
+    <a class="btn btn-primary right" href="{% url 'new' %}"><span>이벤트 생성</span> </a>
+{% endblock %}
