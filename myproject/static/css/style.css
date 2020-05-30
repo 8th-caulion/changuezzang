@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../images/back.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+/* style the header */
+.header {
+    background-color: #E1DCEA;
+    padding: 20;
+    /* padding은 여백값 지정 */
+    text-align: center;
+    /* text-align은 텍스트의 정렬방향을 의미
+        left/right/center/justify(양쪽정렬) */
+    line-height: 150%;
+
+}
+
+/* style the top navigation bar */
+.topnav {
+    overflow: auto;
+    /* overflow는 내용이 박스를 넘어갔을 때 어떻게 처리할 지 정하는 속성!
+        종류: visible(박스를 넘어가도 보여줌), hidden(박스를 넘어가면 숨김), scroll(박스를 넘어가든 안 넘어가든 스크롤바 )
+        auto(박스를 안 넘어가면 스크롤바x, 넘어가면 스크롤바o, initial(기본값으로 설정), inherit(부모 요소의 속성값을 상속)) */
+    background-color: rgb(134, 173, 211);
+}
+
+.topnav a {
+    float: left;
+    /* content가 두 개 이상일 때(A,B 일 때) A에 float: left;를 주게 되면 A내용이 끝나면 그 옆에 바로
+        B가 오게 됨======특히 이미지 옆에 글씨 쓰고 싶을 때 유용함====== */
+    display: block;
+    /* 요소의 종류를 선택하는 속성
+        종류 : inline(앞뒤로 줄바꿈X), block(앞뒤로 줄바꿈O), none(박스생성안됨), inline-block(박스모양이 inline처럼 옆으로 늘어섬) */
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    /* text를 꾸미는 속성
+        종류: underline, overline, line-through, blink(글자가 깜빡이는 속성=파이어폭스에서 제대로 나타남) */
+}
+
+/* 링크 색상 속성 사용법 : 링크에 다양한 스타일을 적용할 수 있음
+            1. A:link 방문전 링크상태
+            2. A:visited 방문 후 링크 상태
+            3. A:hover 마우스 오버했을 때 링크 상태
+            4. A:active 클릭했을 때 링크상태
+    */
+.topnav a:hover {
+    color: black;
+    background-color: rgb(89, 141, 194);
+}
+
+.column {
+    float: left;
+    padding: 40px;
+    height: 700px;
+}
+
+.column.side {
+    width: 20%;
+    background-color: rgb(210, 221, 233);
+    text-align: center;
+}
+
+.column.middle {
+    width: 60%;
+    background-color: #f1f1f1;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    /* float가 이미지 옆에 바로 텍스트가 오게 설정했다면 clear는 사진 주위로 글자가 따라 붙지 않게 해줌
+        clear: left;는 float: left;값을 취소해주고, clear:right;는 float:right;값을 취소해줌
+        즉, clear:both;는 float의 left와 right 값을 모두 취소해준다!! */
+}
+
+@media screen and (max-width: 600px) {
+
+    .column.side,
+    .column.middle {
+        width: 100%;
+    }
+}
+
+/* Style the footer */
+.footer {
+
+    background-color: #F0D18C;
+    text-align: center;
+    line-height: 50%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    /* line-height는 줄 사이 간격을 지정하는 속성임!*/
+}

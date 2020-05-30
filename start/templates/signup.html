@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Signup Page</title>
+</head>
+
+<body>
+    <div style="position:absolute; top:30%; left:68%;">
+        <div class="container">
+            <form action="{% url 'signup' %}" method="POST">
+                {% csrf_token %}
+                <div
+                    style="transform:translate(-50%, -50%); font-size:50px; font-weight:bold;  color:white; text-align:center; vertical-align: middle;">
+                    <h3>Sign up</h3>
+                    Create ID : <input name="username" type="text" style="height: 50px;">
+                    <br />
+                    Create PW : <input name="password1" type="password" style="height: 50px;">
+                    <br />
+                    Confirm PW : <input name="password2" type="password" style="height: 50px;">
+                    <!-- type="password"는 html에 있는 기본 속성 -->
+                    <br />
+                    <br>
+                    <input type="submit" value="심바 등록하기" class="btn btn-primary"
+                        style="height: 50px; width:150px; font-size: 20px; border-radius: 12px; box-shadow: inset 0 1px p rgba(255,255,255,.3), inset 0 0 2px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.29);">
+                    <br />
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>
+            <h3><strong></strong>중앙대학교 멋쟁이 사자처럼 8기</h3>
+            <br>
+            <br>
+            <h4> 개발자 이찬규 </h4>
+
+            <h4> 개발자 정상제 </h4>
+
+            <h4> 개발자 최윤아 </h4>
+
+        </p>
+    </div>
+</body>
+
+</html>
