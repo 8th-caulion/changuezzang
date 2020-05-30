@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">공지광장</h1>
+        <p class="lead">공지광장입니다. 공지를 확인해주세요^^</p>
+    </div>
+</div>
+
+<div class="container">
+    <h3>공지 제목 : {{details.title}}</h3>
+    <hr>
+    <h7>최종 수정일 : {{details.pub_date}}</h7>
+    <hr>
+    <div class="card">
+        <div class="card-body">
+            <p class="card-text">{{details.body}}</p>
+        </div>
+    </div>
+    <hr>
+
+    <a class="btn btn-primary" href="{% url 'home' %}" role="button">목록보기</a>
+    <a class="btn btn-primary" href="{% url 'edit' details.id %}" role="button">수정하기</a>
+    <a class="btn btn-primary" href="{% url 'delete' details.id %}" role="button">삭제하기</a>
+</div>
+
+{% endblock %}

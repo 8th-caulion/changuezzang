@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+<div class="container">
+    <form action="{% url 'update' blog.id %}">
+        <div class="form-group">
+            <label for="exampleFormControlInput1">공지 제목</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="title" value="{{blog.title}}">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">공지 내용</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"
+                name="body">{{blog.body}}</textarea>
+        </div>
+        <input class="btn btn-info" type="submit" value="수정완료">
+    </form>
+</div>
+
+{% endblock %}

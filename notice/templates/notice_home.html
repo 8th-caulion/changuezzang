@@ -1,5 +1,48 @@
 {% extends 'base.html' %}
 
 {% block contents %}
-<h1>asdf</h1>
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">공지광장</h1>
+        <p class="lead">공지광장입니다. 공지를 확인해주세요^^</p>
+    </div>
+</div>
+
+
+<div class="container">
+<div align="right">
+    <a class="btn btn-primary" href="{% url 'new' %}" role="button">새 공지 작성</a>
+</div>
+    <hr>
+    <div class="row" style="margin-bottom : 15px">
+        <SCRIPT language="javascript">
+            var i = 0
+        </SCRIPT>
+        {% for blog in blogs.all %}
+        <div class="col-sm-6" style="padding-bottom: 1em;">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">{{blog.title}}</h3>
+                    {{blog.pub_date}}
+                    <p class="card-text">{{blog.summary}} ......</p>
+                      <a href="{% url 'detail' blog.id %}" class="btn btn-primary">더보기</a>
+                </div>
+            </div>
+        </div>
+        <SCRIPT language="javascript">
+            i = i + 1
+            if (i = 2) {
+                i = 0
+                document.wirte("\n")
+            }
+        </SCRIPT>
+        {% endfor %}
+    </div>
+
+    <hr>
+</div>
+
+
+
 {% endblock %}
