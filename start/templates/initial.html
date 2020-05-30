@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Initial Page</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style type="text/css">
+        a {
+            text-decoration: none
+        }
+    </style>
+</head>
+
+<body>
+    <div
+        style="position:absolute; top:70%; left:29%; transform:translate(-50%, -50%); font-size:50px; font-weight:bold;  color:white; text-align:center;">
+        <h1>심바마당</h1>
+    </div>
+    <div
+        style="position:absolute; top:40%; left:60%; transform:translate(-50%, -50%); font-size:20px; font-weight:bold;  color:white; text-align:center;">
+        <p>
+            <h3>오직 중앙대 멋쟁이 사자들을 위한</h3>
+            <h1>&#34 일정관리 웹사이트 &#34</h1>
+        </p>
+        <br>
+        <br>
+        <p>
+            <h2>🦁 멋사를 위한 모든 공지사항</h2>
+            <br>
+            <h2>🦁 모각코를 위한 캘린더</h2>
+        </p>
+
+    </div>
+    <div
+        style="position:absolute; top:33%; left: 88%; transform:translate(-50%, -50%); font-size:100px; font-weight:bold;  color:white; text-align:center;">
+        <a href="{% url 'read_login' %}">
+            <h1>👉</h1>
+        </a>
+    </div>
+
+</body>
+
+</html>
